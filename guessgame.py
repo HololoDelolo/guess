@@ -2,8 +2,9 @@
 import random
 
 win_num = random.randint(1, 100)
-guess_limit = 10
+guess_limit = 5
 guess_count = 0
+count = 0
 print('''
   "Welcome to My 2D Game"  
 "You have 5 chance to guess."
@@ -12,6 +13,7 @@ while guess_count < guess_limit:
     guess = input("CHOOSE A NUMBER: ")
     try:
         guess = int(guess)
+        count += 1
         if guess == win_num:
             print('''
 "YOU ARE SO LUCKY"
@@ -23,6 +25,7 @@ while guess_count < guess_limit:
         else:
             print('"NOT A LUCK"')
             guess_count += 1
+            print(f'{count} Time')
     except ValueError:
         print("PLEASE TYPE ONLY NUMBER!")
 else:
