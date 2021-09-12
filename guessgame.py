@@ -2,7 +2,7 @@
 import random
 
 win_num = random.randint(1, 100)
-guess_limit = 5
+guess_limit = 10
 guess_count = 0
 print('''
   "Welcome to My 2D Game"  
